@@ -1,0 +1,512 @@
+/* MAIN HTML CSS */
+
+html {
+  background: black;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url(images/castleday.jpg);
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  cursor: url(images/upg_spear.png), auto;
+}
+ button {
+  cursor: url(images/upg_spear.png), auto;
+  font-size: smaller;
+ }
+
+#header {
+  width: 100%;
+  height: 6%;
+  height: relative;
+  background: gray;
+  background-image: url(images/stone3.png);
+  background-size: 30%;
+
+  overflow: auto;
+}
+
+#main {
+  margin: auto;
+  width: 100%;
+  height: 89%;
+  background-image: url(images/castleday.jpg);
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 1.2em;
+  overflow: auto;
+}
+
+#footer {
+  margin: auto;
+  width: 100%;
+  height: 5%;
+  background: black;
+  overflow: auto;
+}
+
+.mainContent {
+  overflow: auto;
+}
+
+#top {
+  color: white; 
+  background-image: url(images/woodbackground.png); 
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+#navBar {
+  height: 100%;
+}
+
+.headerDiv {
+  max-height: 100%;
+  width: 33%;
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+.headerDiv button {
+  font-size: smaller;
+  height: 100%;
+  margin: auto;
+
+
+}
+
+#intro {
+  width: fit-content;
+  height: 100%;
+  background-image: url(images/paper-plain.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 10px;
+  padding-top: 5%;
+  margin: auto;
+  color: black;
+}
+
+#intro h1 {
+  max-width: 90%;
+  height: auto;
+  color: black;
+}
+
+#intro p {
+  padding: 3px;
+  margin: auto;
+  width: 90%;
+  color: black;
+}
+
+#intro2 p {
+  padding: 3px;
+  padding-top: 10%;
+  margin: auto;
+  width: 90%;
+  color: black;
+}
+
+#intro2 label {
+  padding: 3px;
+  margin: auto;
+  width: fit-content;
+  color: black;
+  border-radius: 10px;
+}
+
+#nameInput {
+  padding: 3px;
+  margin: 5px;
+  width: fit-content;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#intro2 {
+  height: 100%;
+  width: fit-content;
+  background-image: url(images/paper-plain.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none;
+  text-align: center;
+  padding: 10px;
+  padding-top: 5%;
+  margin: auto;
+  
+}
+
+#aboutDiv {
+  display: none;
+  text-align: center;
+  padding: 2px;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+#tutorial {
+  display: none;
+  text-align: center;
+  padding: 2px;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  background: gray;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+#moreInfo {
+  display: none;
+}
+
+/* ---END MAIN HTML CSS--- */
+
+/* ---Playing Field / Center window CSS--- */
+
+#pField {
+  height: 100%;
+  display: none;
+  margin: auto;
+  background-image: url(images/battleback9.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  text-align: center;
+  
+}
+
+/*___________________THE TAVERN ____________________________________________ */
+#theKingdom {
+  display: none;
+  margin: auto;
+  height: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+
+}
+#kingdomMessage {
+  margin: auto;
+  padding: 3px;
+  width: 65%;
+  height: 100%;
+  background-image: url(images/paper-plain.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+.tavernMessage {
+  width: 90%;
+  text-align: center;
+  margin:auto;
+  margin-top: 10%;
+}
+.tavernButton {
+  margin:auto;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+/*______________________THE SHOP_______________________________________________*/
+#theShop {
+  display: none;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+  background-image: url(images/paper-plain.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+#shopOptions h1 {
+  background-image: url(images/paper-banner.png);
+}
+#shopMessage {
+  width: fit-content;
+  height: 100%;
+}
+.shopDiv{
+  display: none;
+  margin: auto;
+  padding: 3px;
+  border-radius: 5px;
+  color: black;
+
+}
+#itemInfoDiv {
+  display: none;
+  margin: auto;
+  padding: 3px;
+  color: black;
+  
+}
+#itemStatsList {
+  display: none;
+}
+#theShop table {
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  border: 3px solid gray;
+  background: black;
+  color: white;
+}
+
+#itemStatsList {
+  text-align: center;
+  overflow: auto;
+}
+#itemListTable td {
+  background: black;
+}
+#shopBuy{
+  overflow: auto;
+}
+
+#startBattleDiv {
+  background: rgba(0,0,0,0.5);
+  padding: 4%;
+  color: white;
+}
+
+/* ENEMY DIV */
+
+#enemy {
+  display: none;
+}
+#enemyImgDiv{
+  height: 70%;
+}
+
+#enemyImg {
+  margin:auto;
+  display: none;
+  height: 100%;
+  width: auto;
+
+}
+
+
+#enemy p {
+  color: black;
+  margin: auto;
+  background: gray;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 3px;
+}
+
+/* PLAYER OPTIONS */
+
+#playerOptions {
+  display: none;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+
+}
+
+#magicOptionsDiv {
+  width: 20%;
+  padding: 1%;
+  display: none;
+  margin: auto;
+  background: gray;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+/* ---END Playing Field / Center window CSS--- */
+
+/* ---Left window, Player stats CSS--- */
+
+#pStats {
+  display: none;
+  background-image: url(images/stonewall7.png);
+  width: 15%;
+  height: 100%;
+  border: 3px solid black;
+  padding: 1px;
+  color: black;
+  margin: auto;
+}
+#pStats button {
+  margin: auto;
+  position: left;
+}
+.characterStatsDiv{
+  margin: auto;
+  padding-top: 3%;
+  padding-left: 2%;
+  width: 100%;
+  height: 75%;
+  background-image: url(images/paper-with-sidebar-plain.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+#pStats #pName {
+  color: black;
+  padding-top: 5%;
+  font-weight: bold;
+}
+
+#pStats #playerStats {
+  margin: auto;
+  color: black;
+  padding: 1px;
+
+}
+
+#playerStats p {
+}
+
+/* ---END Left window, Player stats CSS--- */
+
+/* ---Right window / ENEMY STATS CSS--- */
+
+/*ENEMY STATS  */
+
+#eContainer {
+  display: none;
+  padding-top: 5%;
+  padding-left: 10%;
+  height: 75%;
+  width: 100%;
+}
+
+#enemyStats {
+  display: none;
+  background-image: url(images/stonewall7.png);
+  width: 15%;
+  height: 100%;
+  border: 3px solid black;
+}
+
+#enemyStats #eStats {
+  margin: auto;
+  color: black;
+  padding: 1px;
+}
+
+#eStats p {
+}
+
+#enemyStats #eName {
+  color: black
+  max-width: 100%;
+  padding: 2px;
+  font-weight: bold;
+}
+
+/* ---END Right window / Player options CSS--- */
+
+#victory {
+  display: none
+  padding: 3%;
+  width: 70%;
+  max-height: 100%;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  position: absolute;
+  top: 6%;
+  left: 15%;
+  overflow: auto;
+  
+}
+
+#defeat {
+  display: none
+  padding: 3%;
+  width: 70%;
+  max-height: 90%;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  position: absolute;
+  top: 6%;
+  left: 15%;
+  overflow: auto;
+  
+}
+
+#characterPage {
+  position: relative;
+  padding-top: 10%;
+  height: 100%;
+  display: none;
+  margin: auto;
+  text-align: center;
+  background-image: url(images/paper-plain.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+#pEquipped {
+  display: none;
+  margin: auto;
+  text-align: center;
+  background: gray;
+  border-radius: 10px;
+  border: 3px solid black;
+  color: black;
+}
+#pEquipped span {
+  text-decoration: underline;
+}
+#pInventory{
+  display: none;
+  margin: auto;
+  text-align: center;
+  background: gray;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+#pItemStatsWrapper{
+  display: none;
+  margin: auto;
+  text-align: center;
+  background: black;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+#pItemStats{
+  display: none;
+  margin: auto;
+  text-align: center;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+.pItemP {
+  color:black;
+}
+#gameStats{
+  display: none;
+  margin: auto;
+  text-align: center;
+  background: gray;
+  border-radius: 10px;
+  border: 3px solid black;
+
+}

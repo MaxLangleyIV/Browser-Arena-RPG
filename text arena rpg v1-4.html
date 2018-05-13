@@ -1,0 +1,326 @@
+<html>
+
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="text arena rpg.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    
+    <style>
+      body {
+        background: black;
+      }
+
+    </style>
+  </head>
+
+  <body id="body">
+    <!--______________HEADER / NAV CONTENT____________________________-->
+    
+    <div id="header">
+      
+      <div id="navBar">
+        <div class="headerDiv">
+        <button id="tutorialBtn" class="btn-sm" onclick="openTutorial(true, false)">Tutorial</button>
+      </div>
+      <div class="headerDiv">
+        <div id="top">Tiny Browser RPG</div>
+      </div>
+      <div class="headerDiv">
+        <button class="btn-sm" id="about" onclick="openAbout()">About</button>
+      </div>
+      </div>
+    </div>
+
+<!-- ____________________MAIN CONTENT____________________________________________________ -->
+    <div id="main">
+      
+      <!-- LEFT WINDOW / PLAYER STATS -->
+      <div id="pStats" class="mainContent" style="float:left">
+        <div class="characterStatsDiv" id="pStatsContainer">
+          <div id="pName">
+          <p>Player:</p>
+          <p id="playerName"></p>
+        </div>
+        <div id="playerStats">
+          <p>Health: <span class="pHealth">150</span></p>
+          <p>Attack: <span class="pAttack">50</span></p>
+          <p>Defense: <span class="pDefense">50</span></p>
+        </div>
+
+        <button onclick="showCharPage()" class="btn-xs">Character Page</button>
+        </div>
+      </div>
+      
+      <!-- __________________________RIGHT WINDOW_________________________ -->
+      <div id="enemyStats" class="mainContent" style="float:right">
+        <div class="characterStatsDiv" id="eContainer">
+          <div id="eName">
+            <p>Enemy:</p>
+            <p id="enemyName">Borg</p>
+          </div>
+          <div id="eStats">
+            <p>Health: <span class="eHealth">125</span></p>
+            <p>Attack: <span class="eAttack">50</span></p>
+            <p>Defense: <span class="eDefense">50</span></p>
+          </div>
+          <button id="enemyPageBTN" class="btn-xs">Enemy Page</button>
+        </div>
+      </div>
+
+<!---___________________CENTER WINDOW / GAME SCREEN ____________________________-->
+    <div id="centerWindow">
+      <!--ABOUT-->
+    <div id="aboutDiv">
+      <h1>The Text Arena...</h1>
+      <p>is a small browser game inspired by table-top role playing games.</p>
+      <p>Credits:</p>
+      <p>Background art: Thank you <a href="http://blog.spiralgraphics.biz/2011/02/nine-cartoon-backdrops.html">Spiral Graphics</a> for your wonderful backdrops!</p>
+      <p>Cursor and other weapon icons: <a href="http://dycha.net">Thanks Ravenmore!</a></p>
+      <p>Stone textures made public domain from Summoning Wars (RIP)</p>
+      <p>Armor and Weapon Icons from <a href="https://opengameart.org/users/scrittl">Scrittl</a> over at opengameart.org</p>
+      <p>Enemy Character and Animation Slides by <a href="https://craftpix.net/">CraftPix</a>!</p>
+
+      <button onclick="openAbout()">Close</button>
+    </div>
+
+    <!-- tutorial -->
+    <div id="tutorial">
+      <h1>Welcome to the Text Arena Tutorial!</h1>
+      <p>The Text Arena is a small turn based game. The objective is to defeat the enemy before they kill you!</p>
+      <button onclick="moreInfo()">More Info</button>
+      <div id="moreInfo">
+        <p>When you enter the arena an opponent will be selected for you. Since this is a turn based game a coin will be tossed to determine who has the first turn</p>
+        <p>If it is your turn you have as much time as you would like to make a decision. Currently all choices are up and running except for "magic", which will be ready soon.</p>
+        <p>If it is the enemy's turn the computer will take a moment to make a decision (the computer has the same options as you).</p>
+        <p>Most importantly, have fun!</p>
+      </div>
+      <button onclick="openTutorial(false, true)">Close</button>
+    </div>
+
+    <!-- PlaceHolder / Intro -->
+    <div id="intro">
+      <h1>Welcome to the Text Arena</h1>
+      <p>Click "Tutorial" to learn how to get started.</p>
+      <p>If you feel comfortable click "Start Game" and dive right in!</p>
+      <button class="btn-sm" id="startGame" class="btn-sm" onclick="startIntro()">Start Game</button>
+    </div>
+
+    <div id="intro2">
+      <p>Before we embark upon this brave quest I must ask, what is your name adventurer?</p>
+      <label for="nameInput">Enter name: </label>
+      <input type="text" id="nameInput">
+      <button onclick="gameLoop()">Begin your Adventure</button>
+    </div>
+    <!--END intro -->
+
+    <!-- The Tavern / Lobby -->
+      <div id="theKingdom">
+        <div id="kingdomMessage">
+          <h2 class="tavernMessage">Welcome to the the Kingdom of Arkaiden</h2>
+          <br>
+          <p>The city is bustling with life.</p>
+          <p>Many adventures await a hero such as yourself.</p>
+          <p>Where would you like to go?</p>
+          
+        <button class="tavernButton" id="enterArenaBTN" onclick="enterArena()">The Arena</button>
+        <br>
+        <button class="tavernButton" id="shopBTN" onclick="openShop()">The Shop
+        </button>
+        <br>
+        <button class="tavernButton" id="learnMagicBTN">The Wizard's Tower</button>
+      </div>
+      </div>   
+
+      <!-- THE SHOP -->
+      <div id="theShop">
+        <div class="shopDiv" id="shopMessage">
+        
+        <div class="shopDiv" id="shopOptions">
+          <h2>Welcome to the shop! I've got what you need!</h2>
+          <p>We're still under construction so watch the nails...</p>
+          <button onclick="buyStuff(true, false)">Buy Items</button>
+          <br>
+          <br>
+          <button onclick="sellStuff()">Sell Items</button>
+          <br>
+          <br>
+          <button onclick="backToTavern()">Back</button>
+        </div>
+        <div class="shopDiv" id="shopBuy">
+          <p>I've got the finest wares in the lands!</p>
+          <div id="itemListDiv">
+            <table>
+              <thead>Items Available at this Shop</thead>
+
+              <tbody id="itemListTable">
+                
+                
+              </tbody>
+            </table>
+            <div id="itemInfoDiv">
+              <img id="itemIMG" src="">
+              <div class="shopItemStats" id="itemStatsList">
+                
+              </div>
+              <div class="shopItemStats" id="purchaseDiv">
+                <p>Your gold: <span class="yourGold"></span></p>
+                <button onclick="purchase()">Purchase</button>
+                <input type="radio" name="equipWithPurchase" id="equipWithPurchase">
+              </div>
+            </div>
+          </div>
+          <button onclick="buyStuff(false, true)">Back</button>
+        </div>
+        <div class="shopDiv" id="shopSell">
+          <p>What are you lookin' to sell?</p>
+          <p>Sorry, this part of the shop isn't finished yet.</p>
+          <button onclick="sellStuff()">Back</button>
+        </div>
+        </div>
+      </div>
+
+      <!-- PLAYING FIELD -->
+      <div id="pField" class="mainContent">
+        <!--ask to start battle -->
+        <div id="startBattleDiv">
+          <div id="startBattleP">
+            <h1>Welcome to the arena, I hope you're prepared for battle.
+            </h1>
+            <button id="startBatt" onclick="battle()">
+            Start Battle
+          </button>
+          <button onclick="backToTavern()">Exit Arena</button>
+          </div>
+        </div>
+
+        <div id="victory">
+            <h1>VICTORY!</h1>
+            <p>You have defeated your opponent in the arena!</p>
+            <h5>Rewards:</h5>
+            <p>15 gold</p>
+            <button onclick="battle()">Battle Again!</button>
+            <button onclick="backToTavern()">Return to the Tavern</button>
+          </div>
+          <div id="defeat">
+            <h1>DEFEAT!</h1>
+            <p>You were defeated in the arena, better luck next time!</p>
+            <button onclick="battle()">Battle Again!</button>
+            <button onclick="backToTavern()">Return to the Tavern</button>
+          </div>
+
+          <!--enemy char div -->
+        <div id="enemy">
+          <div id="enemyImgDiv">
+            <img id="enemyImg" src="images/Troll1/Attack_000.png" alt="">
+          </div>
+          
+          <p id="enemyP">A bloodthirsty orc enters the arena</p>
+          <p id=descriptorP></p>
+          <button id="toss" onclick="coinToss()">Flip a Coin for the First Turn</button>
+        </div>
+
+        <div id="magicOptionsDiv">
+          <button id="healBTN">Heal</button>
+          <button id="flamesBTN">Flames</button>
+        </div>
+
+           <!-- player options -->
+        <div id="playerOptions">
+          <table>
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><button id="atkBTN" onclick="attack(playerTurn, player, currentEnemy)">Attack</button></td>
+                <td><button id="dfndBTN" onclick="defend(playerTurn, player)">Defend</button></td>
+              </tr>
+              <tr>
+                <td><button id="magicBTN" onclick="openMagicDiv()">Magic</button></td>
+                <td><button id="retreatBTN" onclick="retreat()">Retreat</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="characterPage">
+        <h2 class="playerName">Player Name</h2>
+        <p>Health: <span class="pHealth"></span></p>
+        <p>Attack: <span class="pAttack"></span></p>
+        <p>Defense: <span class="pDefense"></span></p>
+        <p>Defense Up: <span class="defenseUpSpan"></span></p>
+        <p>Crit Rating <span class="pCrit"></span></p>
+        <p>Gold: <span class="yourGold"></span></p>
+        <div><button onclick="showEquipped()">Show Equipped Items</button></div>
+        <div id="pEquipped">
+          <h4>Equipped Items</h4>
+          <p>Helmet: <span id="pHelm">None</span></p>
+          <p>Chestpiece: <span id="pChestpiece">None</span></p>
+          <p>Pants: <span id="pPants">None</span></p>
+          <p>Weapon: <span id="pWeapon">None</span></p>
+          <p>Shield: <span id="pShield">None</span></p>
+        </div>
+        <div><button onclick="showInventory()">Show Inventory</button></div>
+        <div id="pInventory">
+          <div id="pItemStatsWrapper">
+            <img id="itemStatsIMG" src="">
+            <div id="pItemStats">
+          </div>
+            <button onclick="equipItem()">Equip</button>
+            <button onclick='closePItemStats()'>Close</button>
+          </div>
+          
+          <ul id="pInventoryDiv"></ul>
+          <p id="pInventoryMessage">Empty</p>
+        </div>
+        <div><button onclick="showGameStats()">Show Game Stats</button></div>
+        <div id="gameStats">
+          <h4>Game Statistics:</h4>
+          <p>Wins: <span class="wins"></span></p>
+          <p>Loses: <span class="loses"></span></p>
+          <p>Number of Crits: <span class="numberOfCrits"></span></p>
+          <p>Highest Attack: <span class="highestCrit"></span></p>
+          <p>Number of Attacks: <span class="numberOfAttacks"></span></p>
+          <p>Total Damage Done: <span class="totalDamageDone"></span></p>
+          <p>Average damage per attack: <span class="averageAttack"></span></p>
+          <p>Attacks missed: <span class="attacksMissed"></span></p>
+        </div>
+        <button onclick="showCharPage()" class="btn-xs">Back</button>
+      </div>
+
+
+    <!--END CENTER WINDOW_____________________________________________________________________________ -->
+    </div>
+      
+
+      </div>
+<!--__________________________FOOTER CONTENT______________________________________________________________________ -->
+    <div id="footer">
+      <button id="exit" class="btn-sm" onclick="exitGame()">Exit Game</button>
+    </div>
+    <script type="text/javascript" src="text arena rpg items.js"></script>
+    <script type="text/javascript" src="text-rpg-animations.js"></script>
+    <script type="text/javascript" src="text arena rpg.js"></script>
+
+    
+  </body>
+
+</html>
+<!-- 
+game components:
+-The game will be played inside of HTML 
+-Prompt user for name and use it throughout the game
+-Able to play as many times as desired
+
+main functions:
+-tutorial
+-Constructor to generate randomized enemies
+-Cronstructor for player character and stats
+-Game loop that ands upon defeat or victory and allows to play again
+-Function to collect and display data from game loop (wins, loses, stats)
+-Function to calculate percetage of ties, wins and defeats (and possibly more stats such as highest damage and damage evaded)
+
+
+-->
