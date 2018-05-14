@@ -1,7 +1,8 @@
-var animation;
-var i = 0;
-var enemyIMG = $("#enemyImg");
-var troll1AttackArray = [
+var animation; //Pre-defined to use with setInterval()
+var i = 0; //Pre defined to use in loops
+var enemyIMG = $("#enemyImg"); // fetch a DOM element with jQuery
+
+var troll1AttackArray = [ //An array of image locations, to be used in a loop to make an animation
 "images/Troll1/Attack_000.png",
 "images/Troll1/Attack_001.png",
 "images/Troll1/Attack_002.png",
@@ -13,7 +14,7 @@ var troll1AttackArray = [
 "images/Troll1/Attack_008.png",
 "images/Troll1/Attack_009.png"];
 
-var troll1DamagedArray = [
+var troll1DamagedArray = [ //An array of image locations, to be used in a loop to make an animation
 "images/Troll1/Hurt_000.png",
 "images/Troll1/Hurt_001.png",
 "images/Troll1/Hurt_002.png",
@@ -25,7 +26,7 @@ var troll1DamagedArray = [
 "images/Troll1/Hurt_008.png",
 "images/Troll1/Hurt_009.png"];
 
-var troll1DeadArray = [
+var troll1DeadArray = [ //An array of image locations, to be used in a loop to make an animation
 "images/Troll1/Dead_000.png",
 "images/Troll1/Dead_001.png",
 "images/Troll1/Dead_002.png",
@@ -38,29 +39,27 @@ var troll1DeadArray = [
 "images/Troll1/Dead_009.png"];
 
 function playEnemyAttack(){
-	clearInterval(animation);
-	i = 0;
+	clearInterval(animation); //Clears animation to avoid potential overlapping
+	i = 0; //set i to 0 incase it has been changed somewhere
 	animation = setInterval(function(){
-		//enemyIMG.height('60%');
 		enemyIMG.attr('src', troll1AttackArray[i]);
 		i++;
-		//alert(i);
 	if (i > 9){
-		//alert("in clear loop");
+		//alert("in clear loop"); //for troubleshooting
 		enemyIMG.css("padding-top", "0px");
 		enemyIMG.height('100%');
 		enemyIMG.attr('src', troll1AttackArray[0]);
-		clearInterval(animation);
+		clearInterval(animation); //ends animation once it's looped through all the images
 	}
-	}, 50);
+	}, 50); //end of setInterval function, runs 20x per second
 }
 
-function playEnemyDamaged(){
+function playEnemyDamaged(){ //same as above just different images used
 	clearInterval(animation);
 	i = 0;
 	animation = setInterval(function(){
-		enemyIMG.css("padding-top", "10%");
-		enemyIMG.height('70%');
+		enemyIMG.css("padding-top", "10%");//adjusting for image size differences
+		enemyIMG.height('70%');//adjusted size because the images files dont all match
 		enemyIMG.attr('src', troll1DamagedArray[i]);
 		i++;
 		//alert(i);
@@ -74,18 +73,14 @@ function playEnemyDamaged(){
 	}, 50);
 }
 
-function playEnemyDeath(){
+function playEnemyDeath(){ //same as above just different images used
 	clearInterval(animation);
 	i = 0;
 	animation = setInterval(function(){
-		//enemyIMG.height('60%');
 		enemyIMG.attr('src', troll1DeadArray[i]);
 		i++;
 		//alert(i);
 	if (i > 9){
-		//alert("in clear loop");
-		//enemyIMG.height('60%');
-		//enemyIMG.attr('src', troll1AttackArray[0]);
 		clearInterval(animation);
 	}
 	}, 50);

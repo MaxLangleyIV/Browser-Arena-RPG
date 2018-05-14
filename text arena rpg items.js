@@ -1,4 +1,4 @@
-var shopItems = [
+var shopItems = [ //Array of objects that the shop uses to make its item list.
   {
     "id": 0,
     "Name": "Rusted Sword",
@@ -63,7 +63,8 @@ var shopItems = [
 
 ];
 
-var dropItems = [
+// was gonna make it so that there was a chance of items dropping on victory but didn't get to it
+var dropItems = [ 
   { "id": 0,
     "Name": "Tattered Tunic",
     "Type": "Chestpiece",
