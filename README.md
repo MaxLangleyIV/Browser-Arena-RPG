@@ -1,8 +1,6 @@
 # Browser Arena RPG
 Welcome to the Browser Arena RPG! This is a simple turn-based role-playing game where players can engage in battles, manage their character's inventory, and earn gold by winning battles. The game is written in JavaScript and utilizes HTML and CSS for the user interface.
 
-This game was made as a project for my Intro To Computer Science in 2018. Some minor clean-up has been performed on the 
-
 ## Features
 Turn-based battles against enemies with attack and defense mechanics.
 Inventory system for collecting and equipping items.
@@ -23,6 +21,12 @@ The game features a turn-based battle system where players and enemies take turn
 Players can attack or defend during their turn.
 Gold can be acquired from battles and can be used to purchase items which improve character stats.
 The player's goal is to defeat enemies and progress through the game by exploring different areas.
+
+## About The Project
+This game was made as a personal project in early 2018, when I started learning to code. 
+While it's not the most elegant or beautiful, it stands as an early milestone and reminder of how far I have come.
+
+Some minor clean-up has been performed since, however the game logic is unchanged.
 
 ## Credits
 Background art: Thank you [Spiral Graphics](http://blog.spiralgraphics.biz/2011/02/nine-cartoon-backdrops.html) for your wonderful backdrops!
