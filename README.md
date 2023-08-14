@@ -14,7 +14,7 @@ Basic animation effects to enhance the gaming experience.
 2. Open the playGame.html file in your preferred web browser.
    
 ## Usage
-1. Open the game by launching the playGame.html file in a web browser.
+1. Open the game by launching the PLAY_GAME.html file in a web browser.
 2. Follow on-screen instructions to create your character and begin the adventure.
 3. Navigate the game menu, engage in battles, and manage your inventory.
 4. Make choices during battles by using available actions such as attack, defend, and magic.
