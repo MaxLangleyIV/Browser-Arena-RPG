@@ -11,13 +11,12 @@ Basic animation effects to enhance the gaming experience.
 
 ## Installation
 1. Clone or download the repository to your local machine.
-2. Open the playGame.html file in your preferred web browser.
    
 ## Usage
-1. Open the game by launching the PLAY_GAME.html file in a web browser.
+1. Launch the game by opening PLAY_GAME.html in a web browser.
 2. Follow on-screen instructions to create your character and begin the adventure.
 3. Navigate the game menu, engage in battles, and manage your inventory.
-4. Make choices during battles by using available actions such as attack, defend, and magic.
+4. Make choices during battles by using available actions such as attack, defend, and retreat.
 
 ## Game Mechanics
 The game features a turn-based battle system where players and enemies take turns to attack.
