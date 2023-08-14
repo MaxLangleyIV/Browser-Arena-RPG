@@ -6,6 +6,7 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="text arena rpg.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     
@@ -119,7 +120,7 @@
       <p>Before we embark upon this brave quest I must ask, what is your name adventurer?</p>
       <label for="nameInput">Enter name: </label>
       <input type="text" id="nameInput">
-      <button onclick="gameLoop()">Begin your Adventure</button>
+      <button onclick="gameStart()">Begin your Adventure</button>
     </div>
     <!--END intro -->
 
@@ -264,7 +265,7 @@
         <div id="pEquipped">
           <h4>Equipped Items</h4>
           <p>Helmet: <span id="pHelm">None</span></p>
-          <p>Chestpiece: <span id="pChestpiece">None</span></p>
+          <p>Chest-piece: <span id="pChestpiece">None</span></p>
           <p>Pants: <span id="pPants">None</span></p>
           <p>Weapon: <span id="pWeapon">None</span></p>
           <p>Shield: <span id="pShield">None</span></p>
@@ -309,25 +310,14 @@
     </div>
     <script type="text/javascript" src="text arena rpg items.js"></script>
     <script type="text/javascript" src="text-rpg-animations.js"></script>
-    <script type="text/javascript" src="text arena rpg.js"></script>
+    <script type="text/javascript" src="UIFunctions.js"></script>
+    <script type="text/javascript" src="BasicFunctions.js"></script>
+    <script type="text/javascript" src="ShopFunctions.js"></script>
+    <script type="text/javascript" src="CombatFunctions.js"></script>
+    <script type="text/javascript" src="TextArenaRPG.js"></script>
+    
 
     
   </body>
 
 </html>
-<!-- 
-game components:
--The game will be played inside of HTML 
--Prompt user for name and use it throughout the game
--Able to play as many times as desired
-
-main functions:
--tutorial
--Constructor to generate randomized enemies
--Cronstructor for player character and stats
--Game loop that ands upon defeat or victory and allows to play again
--Function to collect and display data from game loop (wins, loses, stats)
--Function to calculate percetage of ties, wins and defeats (and possibly more stats such as highest damage and damage evaded)
-
-
--->
